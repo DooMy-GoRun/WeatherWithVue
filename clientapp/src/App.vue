@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <v-app>
+            <v-toolbar dark
+                       prominent
+                       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
+                <v-toolbar-title>Погода в городе N на ближайшие 10 дней:</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn>Обновить</v-btn>
+            </v-toolbar>
+            <v-data-table :headers="headers"
+                          :items="desserts"
+                          :items-per-page="10"
+                          class="elevation-1">
+
+            </v-data-table>
+        </v-app>
+    </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+<script>
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
+ 
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
